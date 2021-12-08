@@ -19,3 +19,94 @@
 .warung1{
     padding-bottom: 30px;
 }
+
+.stok_header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/warung1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 280px;
+}
+.tombol_stok_warung{
+    margin-left: 100%;
+    font-size: 20px;
+    padding:5px 20px;
+    border-radius: 10px;
+}
+.stok_nama_warung{
+    color: white;
+    font-weight: bold;
+    font-size: 72px;
+    padding-top: 50px;
+}
+.stok_navbar_spacer{
+    margin-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.stok_navbar{
+    font-size: 20px;
+    padding-left: 93px;
+    padding-right: 70px;
+    background-color: #424242;
+}
+
+.stok_navbar a{
+    color: white !important;
+}
+.stok_navbar p{
+    color: white !important;
+}
+
+.gambar_produk{
+    width: 300px;
+}
+.stok_barang{
+    padding-top: 35px;
+    padding-bottom: 50px;
+    background-color: #424242;
+}
+
+.stok_barang p{
+    color:white
+}
+.nama_produk{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.data_produk{
+    margin-top: -15px;
+}
+.list_stok_barang{
+    padding-bottom: 24px;
+}
+
+.form_sign_up{
+    padding: 20px 300px;
+}
+.title_sign_up{
+    padding-top: 80px;
+    color: white;
+}
+.halaman_sign_up{
+    background-color: #424242;
+    padding-bottom: 58px;
+}
+.button_sign_up{
+    padding: 10px 310px;
+    font-size: 20px;
+}
+.informasi_sign_up{
+    color: white;
+}
+
+.button_login{
+    padding: 10px 320px;
+    font-size: 20px;
+}
+.halaman_login{
+    background-color: #424242;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
