@@ -23,4 +23,34 @@ class Home extends CI_Controller{
     public function login(){
         $this->load->view('login');
     }
+
+    public function dashboard(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/dashboard');
+    }
+
+    public function kelolaproduk(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/kelolaproduk');
+    }
+
+    public function stokproduk(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/stokproduk');
+    }
+
+    public function laporanstok(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/laporanstok');
+    }
+
+    public function laporanpemasukan(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/laporanpemasukan');
+    }
+
+    public function transaksi(){
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/transaksi');
+    }
 }
