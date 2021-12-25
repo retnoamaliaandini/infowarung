@@ -13,35 +13,48 @@
         <div class="halaman_sign_up">
             <div class="container">
                 <h1 class="title_sign_up">Sign Up</h1>
-                <div class="form_sign_up">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="nama warung">
-                        <label for="floatingInput">Nama Warung</label>
+                <?php echo form_open('auth/daftar'); ?>
+                    <div class="form_sign_up">
+                        <?php
+                            if($this->session->userdata('error_signup') != null)
+                            {
+                                echo '<div class="alert alert-danger" role="alert">';
+                                echo $this->session->userdata('error_signup');
+                                echo '</div>';
+                            }
+                        ?>
+                        <div class="form-floating mb-3">
+                            <input name="nama_warung" type="text" class="form-control" id="floatingInput" placeholder="nama warung">
+                            <label for="floatingInput">Nama Warung</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="alamat_warung" type="text" class="form-control" id="floatingPassword" placeholder="alamat warung">
+                            <label for="floatingPassword">Alamat Warung</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="penanggung_jawab" type="text" class="form-control" id="floatingPassword" placeholder="penanggung jawab">
+                            <label for="floatingPassword">Penanggung Jawab</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="telepon" type="text" class="form-control" id="floatingPassword" placeholder="no telepon">
+                            <label for="floatingPassword">Nomor Telepon</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="email" type="email" class="form-control" id="floatingPassword" placeholder="alamat email">
+                            <label for="floatingPassword">Alamat Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="passkonfirm" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Konfirmasi Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-dark button_sign_up">Sign Up</button>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="alamat warung">
-                        <label for="floatingPassword">Alamat Warung</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="penanggung jawab">
-                        <label for="floatingPassword">Penanggung Jawab</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="no telepon">
-                        <label for="floatingPassword">Nomor Telepon</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="alamat email">
-                        <label for="floatingPassword">Alamat Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
-                    </div>
-                    <button type="submit" class="btn btn-dark button_sign_up">Sign Up</button>
-                </div>
-                    <p class="informasi_sign_up">Sudah Memiliki Akun?<a href="#"> Login Sekarang</a></p>
-
+                <?php echo form_close(); ?>
+                <p class="informasi_sign_up">Sudah Memiliki Akun?<a href="#"> Login Sekarang</a></p>
             </div>
         </div>
 

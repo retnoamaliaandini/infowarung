@@ -13,17 +13,27 @@
         <div class="halaman_login">
             <div class="container">
                 <h1 class="title_sign_up">Login</h1>
+                <?php echo form_open('auth/login'); ?>
                 <div class="form_sign_up">
+                    <?php
+                        if($this->session->userdata('error_login') != null)
+                        {
+                            echo '<div class="alert alert-danger" role="alert">';
+                            echo $this->session->userdata('error_login');
+                            echo '</div>';
+                        }
+                    ?>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="nama warung">
+                        <input name="email/telepon" type="text" class="form-control" id="floatingInput" placeholder="nama warung">
                         <label for="floatingInput">Alamat Email/Nomor Telepon</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="alamat warung">
+                        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="alamat warung">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <button type="submit" class="btn btn-dark button_login">Login</button>
                 </div>
+                <?php echo form_close(); ?>
                     <p class="informasi_sign_up">Belum Memiliki Akun?<a href="#"> Daftar Sekarang</a></p>
             </div>
         </div>    

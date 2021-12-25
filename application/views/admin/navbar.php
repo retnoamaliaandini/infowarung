@@ -26,6 +26,9 @@
             <a href="<?php echo base_url()?>dashboard" class="dashboard-navbar-link list-group-item list-group-item-action py-2" aria-current="true">
                 Home
             </a>
+            <a href="<?php echo base_url()?>detail" class="dashboard-navbar-link list-group-item list-group-item-action py-2" aria-current="true">
+                Detail Warung
+            </a>
             <a class="list-group-item list-group-item-action py-2 ripple dashboard-navbar-link dashboard-navbar-produk-expand" aria-current="true" data-bs-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1" role="button">
                 Produk<span class="produk-expand-arrow"><i class="fa fa-caret-right" style=""></i><i class="fa fa-caret-down"></i></span>
             </a>
@@ -50,7 +53,7 @@
             <a href="<?php echo base_url()?>laporan/pemasukan" class="dashboard-navbar-link list-group-item list-group-item-action py-2" aria-current="true">
                 Laporan Pemasukan
             </a>
-            <a href="#" class="dashboard-navbar-link list-group-item list-group-item-action py-2" aria-current="true">
+            <a href="<?php echo base_url()?>logout" class="dashboard-navbar-link list-group-item list-group-item-action py-2" aria-current="true">
                 Logout
             </a>
         </div>

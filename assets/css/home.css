@@ -12,16 +12,21 @@
 }
 .gambar_warung{
     width:100%;
+    height: 200px;
 }
 .home_lihat{
     margin-left: 252px;
 }
 .warung1{
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    color: black;
+    text-decoration: none !important;
+}
+.warung1-link{
+    text-decoration: none !important;
 }
 
 .stok_header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/warung1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 70px;
@@ -47,8 +52,8 @@
 
 .stok_navbar{
     font-size: 20px;
-    padding-left: 93px;
-    padding-right: 70px;
+    padding-left: 90px;
+    padding-top: 8px;
     background-color: #424242;
 }
 
@@ -61,11 +66,16 @@
 
 .gambar_produk{
     width: 300px;
+    height: 200px;
 }
 .stok_barang{
     padding-top: 35px;
     padding-bottom: 50px;
     background-color: #424242;
+}
+.btn-kategori-stok{
+    margin-top: 6px;
+    border-radius: 20px;
 }
 
 .stok_barang p{
@@ -239,6 +249,7 @@ input:checked + .slider-toggle:before {
 }
 .chart-pendapatan{
     margin-top: 60px;
+    padding-bottom: 20px;
 }
 
 .kelolaproduk-btn{
@@ -269,6 +280,7 @@ input:checked + .slider-toggle:before {
 }
 .produk-info-gambar{
     width: 250px;
+    height: 200px;
 }
 .produk-info-nama{
     padding-top: 20px;
@@ -341,4 +353,38 @@ input:checked + .slider-toggle:before {
 }
 .transaksi-simpan-btn{
     margin-right: 20px;
+}
+
+.detail-warung-form{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+.detail-warung-update-pass-form{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.foto_warung_detail{
+    width: 200px;
+    padding-bottom: 15px;
+}
+#btn_hapus_foto_detail{
+    padding: 0px 6px;
+    border-radius: 20px;
+    margin-left: -28px;
+    margin-top: -99px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn_hapus_gambar_produk{
+    border-radius: 20px;
+    margin-left: 8px;
+    margin-top: -14px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.total-harga-modal-text{
+    text-align: right;
+    font-size: 20px;
 }

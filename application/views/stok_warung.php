@@ -9,11 +9,11 @@
     <title>InfoWarung</title>
 </head>
 <body>
-    <div class = "stok_header">  
+    <div class= "stok_header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/img/warung/<?php echo $warung->foto; ?>');">  
         <div class = "container">
-            <button type="button" class="btn btn-light tombol_stok_warung">Kembali</button>
+            <a href="<?php echo base_url()?>" class="btn btn-light tombol_stok_warung">Kembali</a>
             <center>
-            <h1 class="stok_nama_warung">Warung Serba Lengkap</h1>
+                <h1 class="stok_nama_warung"><?php echo $warung->nama; ?></h1>
             </center>
         </div>  
     </div>
@@ -26,52 +26,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
+                            <?php foreach($kategori as $k){ ?>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Keperluan Rumah Tangga</a>
+                                <button type="button" class="btn btn-secondary btn-kategori-stok" data-id="<?php echo $k->id?>"><?php echo $k->kategori?></button>
                             </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Keperluan Dapur</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Makanan Ringan</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Produk Susu</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Obat-Obatan</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Minuman</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Makanan Instan</a>
-                            </li>
-                            <li class="nav-item">
-                                <p class="stok_navbar_spacer">|</p>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">ATK</a>
-                            </li>
-                            
+                                <?php  if( next( $kategori ) ) { ?>
+                                    <li class="nav-item">
+                                    <p class="stok_navbar_spacer">|</p>
+                                </li>
+                                <?php } ?>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -82,71 +46,15 @@
         <div class ="container">
             <center>
             <div class="list_stok_barang">
-                <div class="row">
+                <div class="row stok_barang_section">
+                    <?php foreach($produk as $p){ ?>
                     <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
+                        <img class="gambar_produk" src = "<?php echo base_url()?>assets/img/produk/<?php echo $p->gambar?>">
+                        <p class="nama_produk"><?php echo $p->nama?></p>
+                        <p class="data_produk">Stok : <?php echo $p->stok?></p>
+                        <p class="data_produk">harga : Rp. <?php echo $p->harga?></p>
                     </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list_stok_barang">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list_stok_barang">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="gambar_produk"src = "<?php echo base_url()?>assets/img/minyak.png">
-                        <p class="nama_produk">Indomie Soto</p>
-                        <p class="data_produk">Stok : 20</p>
-                        <p class="data_produk">harga : Rp.20.000</p>
-                    </div>
+                    <?php } ?>    
                 </div>
             </div>
             </center>
@@ -156,6 +64,32 @@
 
 
      <!--JS-->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        $(".btn-kategori-stok").on('click', function() {
+            id = $(this).data('id');
+            id_warung = $(location).attr("href").split('/').pop();
+            $.ajax({
+                type: "GET",
+                url: "http://localhost/infowarung/produk/filter/user/"+id+"/"+id_warung,
+                data: null, 
+                success: function(data){
+                    $(".stok_barang_section").empty();
+                    if(data.status =='success'){
+                        $.each(data.produk, function(k, v) {
+                            $(".stok_barang_section").append(
+                                '<div class="col-md-4"><img class="gambar_produk" src = "<?php echo base_url()?>assets/img/produk/'+v.gambar+'"><p class="nama_produk">'+v.nama+'</p><p class="data_produk">Stok : '+v.stok+'</p><p class="data_produk">harga : Rp. '+v.harga+'</p></div>'
+                            );
+                        });
+                    } else {
+                        $(".stok_barang_section").append(
+                                "<center><p style='padding-bottom:100px;'>Tidak Ada Produk</p></center>"
+                        );
+                    }
+                }
+            }); 
+        });
+    </script>
 </body>
 </html>

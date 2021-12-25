@@ -52,12 +52,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['login'] = 'home/login'; 
 $route['register'] = 'home/sign_up'; 
-$route['stok'] = 'home/stok_warung'; 
+$route['stok/(:num)'] = 'home/stok_warung/$1'; 
 $route['dashboard'] = 'home/dashboard'; 
 $route['produk/kelola'] = 'home/kelolaproduk';
 $route['produk/stok'] = 'home/stokproduk'; 
 $route['laporan/stok'] = 'home/laporanstok'; 
 $route['laporan/pemasukan'] = 'home/laporanpemasukan'; 
-$route['transaksi'] = 'home/transaksi'; 
+$route['transaksi'] = 'home/transaksi';
+$route['detail'] = 'home/detailwarung'; 
+
+$route['logout'] = 'auth/logout';
+
+$route['statuswarung'] = 'warung/statuswarung'; 
+$route['hapusfotowarung'] = 'warung/hapusfotodetail'; 
+$route['warung/filter/(:any)'] = 'warung/getFiltered/$1';
+
+$route['produk/(:num)'] = 'produk/get/$1';
+$route['produk/delete/(:num)'] = 'produk/delete/$1';
+$route['produk/deletegambar/(:any)'] = 'produk/deletegambar/$1';
+$route['produk/filter/(:num)'] = 'produk/getfilter/$1';
+$route['produk/filter/user/(:num)/(:num)'] = 'produk/getfilterForUser/$1/$2';
+$route['produk/updatestok'] = 'produk/updatestok';
+
+$route['stok/filter/(:any)'] = 'stok/getstokfilter/$1';
+
+$route['transaksi/filter/(:any)'] = 'transaksi/getTransaksifilter/$1';
+$route['transaksi/simpan'] = 'transaksi/simpanTransaksi';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
